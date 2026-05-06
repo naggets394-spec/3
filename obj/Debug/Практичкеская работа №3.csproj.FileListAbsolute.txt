@@ -1,0 +1,11 @@
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\bin\Debug\Практичкеская работа №3.exe.config
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\bin\Debug\Практичкеская работа №3.exe
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\bin\Debug\Практичкеская работа №3.pdb
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\obj\Debug\Практичкеская работа №3.csproj.AssemblyReference.cache
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\obj\Debug\Практичкеская_работа__3.Form1.resources
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\obj\Debug\Практичкеская_работа__3.Properties.Resources.resources
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\obj\Debug\Практичкеская работа №3.csproj.GenerateResource.cache
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\obj\Debug\Практичкеская работа №3.csproj.CoreCompileInputs.cache
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\obj\Debug\Практичкеская работа №3.exe
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\obj\Debug\Практичкеская работа №3.pdb
+D:\Users\1213-7\Documents\2-ИСП\Полевая\КИС\Практичкеская работа №3\obj\Debug\Практичкеская работа №3.exe.config
