@@ -36,24 +36,25 @@
             this.textBoxА5 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выполнитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupListA = new System.Windows.Forms.GroupBox();
-            this.groupBoxRandom = new System.Windows.Forms.GroupBox();
-            this.radioBtnRandTrue = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBoxA6 = new System.Windows.Forms.TextBox();
-            this.textBoxA7 = new System.Windows.Forms.TextBox();
             this.textBoxA8 = new System.Windows.Forms.TextBox();
+            this.textBoxA7 = new System.Windows.Forms.TextBox();
+            this.textBoxA6 = new System.Windows.Forms.TextBox();
+            this.groupBoxRandom = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonOn = new System.Windows.Forms.Button();
+            this.radioButtonHand = new System.Windows.Forms.RadioButton();
+            this.radioButtonRand = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             this.groupListA.SuspendLayout();
             this.groupBoxRandom.SuspendLayout();
@@ -61,28 +62,29 @@
             // 
             // textBoxА1
             // 
-            this.textBoxА1.Location = new System.Drawing.Point(18, 29);
+            this.textBoxА1.Location = new System.Drawing.Point(17, 33);
             this.textBoxА1.Name = "textBoxА1";
             this.textBoxА1.Size = new System.Drawing.Size(222, 20);
             this.textBoxА1.TabIndex = 0;
+            this.textBoxА1.TextChanged += new System.EventHandler(this.textBoxА1_TextChanged);
             // 
             // textBoxА2
             // 
-            this.textBoxА2.Location = new System.Drawing.Point(18, 67);
+            this.textBoxА2.Location = new System.Drawing.Point(17, 71);
             this.textBoxА2.Name = "textBoxА2";
             this.textBoxА2.Size = new System.Drawing.Size(222, 20);
             this.textBoxА2.TabIndex = 1;
             // 
             // textBoxА3
             // 
-            this.textBoxА3.Location = new System.Drawing.Point(18, 108);
+            this.textBoxА3.Location = new System.Drawing.Point(17, 112);
             this.textBoxА3.Name = "textBoxА3";
             this.textBoxА3.Size = new System.Drawing.Size(222, 20);
             this.textBoxА3.TabIndex = 2;
             // 
             // textBoxА4
             // 
-            this.textBoxА4.Location = new System.Drawing.Point(18, 150);
+            this.textBoxА4.Location = new System.Drawing.Point(17, 154);
             this.textBoxА4.Name = "textBoxА4";
             this.textBoxА4.Size = new System.Drawing.Size(222, 20);
             this.textBoxА4.TabIndex = 3;
@@ -91,7 +93,7 @@
             // textBoxА5
             // 
             this.textBoxА5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxА5.Location = new System.Drawing.Point(18, 192);
+            this.textBoxА5.Location = new System.Drawing.Point(17, 196);
             this.textBoxА5.Name = "textBoxА5";
             this.textBoxА5.Size = new System.Drawing.Size(222, 20);
             this.textBoxА5.TabIndex = 4;
@@ -104,7 +106,7 @@
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(812, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(751, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -119,6 +121,29 @@
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
+            // выполнитьToolStripMenuItem
+            // 
+            this.выполнитьToolStripMenuItem.Name = "выполнитьToolStripMenuItem";
+            this.выполнитьToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.выполнитьToolStripMenuItem.Text = "Выполнить";
+            // 
+            // очиститьToolStripMenuItem
+            // 
+            this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
+            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.очиститьToolStripMenuItem.Text = "Очистить";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(133, 6);
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.выходToolStripMenuItem.Text = "Выход";
+            // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -130,31 +155,8 @@
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.справкаToolStripMenuItem.Text = "Справка";
-            // 
-            // выполнитьToolStripMenuItem
-            // 
-            this.выполнитьToolStripMenuItem.Name = "выполнитьToolStripMenuItem";
-            this.выполнитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.выполнитьToolStripMenuItem.Text = "Выполнить";
-            // 
-            // очиститьToolStripMenuItem
-            // 
-            this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
-            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.очиститьToolStripMenuItem.Text = "Очистить";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // выходToolStripMenuItem
-            // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.выходToolStripMenuItem.Text = "Выход";
             // 
             // groupListA
             // 
@@ -169,92 +171,79 @@
             this.groupListA.Controls.Add(this.textBoxА1);
             this.groupListA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupListA.ForeColor = System.Drawing.Color.DarkBlue;
-            this.groupListA.Location = new System.Drawing.Point(115, 53);
+            this.groupListA.Location = new System.Drawing.Point(112, 88);
             this.groupListA.Name = "groupListA";
-            this.groupListA.Size = new System.Drawing.Size(259, 351);
+            this.groupListA.Size = new System.Drawing.Size(259, 360);
             this.groupListA.TabIndex = 11;
             this.groupListA.TabStop = false;
             this.groupListA.Text = "Первый список покупок";
+            // 
+            // textBoxA8
+            // 
+            this.textBoxA8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxA8.Location = new System.Drawing.Point(17, 323);
+            this.textBoxA8.Name = "textBoxA8";
+            this.textBoxA8.Size = new System.Drawing.Size(222, 20);
+            this.textBoxA8.TabIndex = 7;
+            // 
+            // textBoxA7
+            // 
+            this.textBoxA7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxA7.Location = new System.Drawing.Point(17, 280);
+            this.textBoxA7.Name = "textBoxA7";
+            this.textBoxA7.Size = new System.Drawing.Size(222, 20);
+            this.textBoxA7.TabIndex = 6;
+            // 
+            // textBoxA6
+            // 
+            this.textBoxA6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxA6.Location = new System.Drawing.Point(17, 238);
+            this.textBoxA6.Name = "textBoxA6";
+            this.textBoxA6.Size = new System.Drawing.Size(222, 20);
+            this.textBoxA6.TabIndex = 5;
             // 
             // groupBoxRandom
             // 
             this.groupBoxRandom.BackColor = System.Drawing.Color.Transparent;
             this.groupBoxRandom.Controls.Add(this.button2);
             this.groupBoxRandom.Controls.Add(this.button1);
-            this.groupBoxRandom.Controls.Add(this.radioBtnRandTrue);
             this.groupBoxRandom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBoxRandom.ForeColor = System.Drawing.Color.DarkBlue;
-            this.groupBoxRandom.Location = new System.Drawing.Point(473, 53);
+            this.groupBoxRandom.Location = new System.Drawing.Point(460, 88);
             this.groupBoxRandom.Name = "groupBoxRandom";
-            this.groupBoxRandom.Size = new System.Drawing.Size(243, 202);
+            this.groupBoxRandom.Size = new System.Drawing.Size(243, 161);
             this.groupBoxRandom.TabIndex = 13;
             this.groupBoxRandom.TabStop = false;
             this.groupBoxRandom.Text = "Случайное заполнение";
             this.groupBoxRandom.Enter += new System.EventHandler(this.groupBoxRandom_Enter);
             // 
-            // radioBtnRandTrue
+            // button2
             // 
-            this.radioBtnRandTrue.AllowDrop = true;
-            this.radioBtnRandTrue.AutoSize = true;
-            this.radioBtnRandTrue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioBtnRandTrue.Location = new System.Drawing.Point(26, 43);
-            this.radioBtnRandTrue.Name = "radioBtnRandTrue";
-            this.radioBtnRandTrue.Size = new System.Drawing.Size(192, 17);
-            this.radioBtnRandTrue.TabIndex = 0;
-            this.radioBtnRandTrue.Text = "Включить случайное заполнение";
-            this.radioBtnRandTrue.UseVisualStyleBackColor = true;
-            this.radioBtnRandTrue.CheckedChanged += new System.EventHandler(this.radioBtnRandTrue_CheckedChanged);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(34, 98);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 47);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Сгенерировать список непродовольственных товаров";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(35, 90);
+            this.button1.Location = new System.Drawing.Point(34, 48);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(168, 34);
             this.button1.TabIndex = 1;
             this.button1.Text = "Сгенерировать список продуктов";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(35, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 34);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Сгенерировать список продовольственных товаров";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBoxA6
-            // 
-            this.textBoxA6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxA6.Location = new System.Drawing.Point(18, 234);
-            this.textBoxA6.Name = "textBoxA6";
-            this.textBoxA6.Size = new System.Drawing.Size(222, 20);
-            this.textBoxA6.TabIndex = 5;
-            // 
-            // textBoxA7
-            // 
-            this.textBoxA7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxA7.Location = new System.Drawing.Point(18, 276);
-            this.textBoxA7.Name = "textBoxA7";
-            this.textBoxA7.Size = new System.Drawing.Size(222, 20);
-            this.textBoxA7.TabIndex = 6;
-            // 
-            // textBoxA8
-            // 
-            this.textBoxA8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxA8.Location = new System.Drawing.Point(18, 319);
-            this.textBoxA8.Name = "textBoxA8";
-            this.textBoxA8.Size = new System.Drawing.Size(222, 20);
-            this.textBoxA8.TabIndex = 7;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(461, 330);
+            this.label1.Location = new System.Drawing.Point(447, 291);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 13);
             this.label1.TabIndex = 14;
@@ -266,7 +255,7 @@
             this.ClearBtn.BackColor = System.Drawing.Color.Transparent;
             this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ClearBtn.ForeColor = System.Drawing.Color.DarkBlue;
-            this.ClearBtn.Location = new System.Drawing.Point(473, 437);
+            this.ClearBtn.Location = new System.Drawing.Point(584, 389);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(119, 19);
             this.ClearBtn.TabIndex = 15;
@@ -276,8 +265,7 @@
             // textBox1
             // 
             this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(464, 350);
+            this.textBox1.Location = new System.Drawing.Point(450, 311);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(252, 20);
             this.textBox1.TabIndex = 16;
@@ -287,12 +275,40 @@
             this.buttonOn.BackColor = System.Drawing.Color.Transparent;
             this.buttonOn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonOn.ForeColor = System.Drawing.Color.DarkBlue;
-            this.buttonOn.Location = new System.Drawing.Point(236, 437);
+            this.buttonOn.Location = new System.Drawing.Point(450, 389);
             this.buttonOn.Name = "buttonOn";
             this.buttonOn.Size = new System.Drawing.Size(119, 19);
             this.buttonOn.TabIndex = 17;
             this.buttonOn.Text = "Выполнить";
             this.buttonOn.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonHand
+            // 
+            this.radioButtonHand.AutoSize = true;
+            this.radioButtonHand.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonHand.ForeColor = System.Drawing.Color.DarkBlue;
+            this.radioButtonHand.Location = new System.Drawing.Point(112, 45);
+            this.radioButtonHand.Name = "radioButtonHand";
+            this.radioButtonHand.Size = new System.Drawing.Size(123, 17);
+            this.radioButtonHand.TabIndex = 8;
+            this.radioButtonHand.TabStop = true;
+            this.radioButtonHand.Text = "Заполнить вручную";
+            this.radioButtonHand.UseVisualStyleBackColor = false;
+            this.radioButtonHand.CheckedChanged += new System.EventHandler(this.radioButtonHand_CheckedChanged);
+            // 
+            // radioButtonRand
+            // 
+            this.radioButtonRand.AutoSize = true;
+            this.radioButtonRand.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonRand.ForeColor = System.Drawing.Color.DarkBlue;
+            this.radioButtonRand.Location = new System.Drawing.Point(460, 45);
+            this.radioButtonRand.Name = "radioButtonRand";
+            this.radioButtonRand.Size = new System.Drawing.Size(128, 17);
+            this.radioButtonRand.TabIndex = 3;
+            this.radioButtonRand.TabStop = true;
+            this.radioButtonRand.Text = "Заполнить случайно";
+            this.radioButtonRand.UseVisualStyleBackColor = false;
+            this.radioButtonRand.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // Form1
             // 
@@ -300,7 +316,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Практичкеская_работа__3.Properties.Resources.notebook_paper_background_grid_note_document_vector;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(812, 500);
+            this.ClientSize = new System.Drawing.Size(751, 473);
+            this.Controls.Add(this.radioButtonHand);
+            this.Controls.Add(this.radioButtonRand);
             this.Controls.Add(this.buttonOn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ClearBtn);
@@ -318,7 +336,6 @@
             this.groupListA.ResumeLayout(false);
             this.groupListA.PerformLayout();
             this.groupBoxRandom.ResumeLayout(false);
-            this.groupBoxRandom.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,7 +360,6 @@
         private System.Windows.Forms.GroupBox groupBoxRandom;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioBtnRandTrue;
         private System.Windows.Forms.TextBox textBoxA8;
         private System.Windows.Forms.TextBox textBoxA7;
         private System.Windows.Forms.TextBox textBoxA6;
@@ -351,6 +367,8 @@
         private System.Windows.Forms.Button ClearBtn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonOn;
+        private System.Windows.Forms.RadioButton radioButtonHand;
+        private System.Windows.Forms.RadioButton radioButtonRand;
     }
 }
 
