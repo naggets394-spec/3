@@ -53,16 +53,22 @@ namespace Практичкеская_работа__3
         {
 
             Random rand = new Random();
-            int item;
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 6; i++)
             {
-                purchases.Add("tew");
+                purchases.Add(shopList[rand.Next(shopList.Length)]);
+                //temp += purchases[i] + " ";
             }
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < purchases.Count; i++)
             {
-                groupListA.Controls[$"textBoxА{i + 1}"].Text = purchases[i].ToString();
-                groupListA.Controls[$"textBoxА{i + 1}"].Enabled = true;
+                groupBox1.Controls[$"textBox{i + 1}"].Text = purchases[i].ToString();
+                groupBox1.Controls[$"textBox{i + 1}"].Enabled = false;
             }
+            //for (int i = 0; i < purchases.Count; i++)
+            //{
+            //    groupBoxListA.Controls[$"textBoxA{i + 1}"].Text = "123";
+            //    /*groupBoxListA.Controls[$"textBoxА{i + 1}"].Text = "tew";*///purchases[i].ToString();
+            //    groupBoxListA.Controls[$"textBoxА{i + 1}"].Enabled = true;
+            //}
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -86,6 +92,29 @@ namespace Практичкеская_работа__3
         private void textBoxА1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.Enabled = true;
+            textBox2.Clear();
+            textBox2.Enabled = true;
+            textBox3.Clear();
+            textBox3.Enabled = true;
+            textBox4.Clear();
+            textBox4.Enabled = true;
+            textBox5.Clear();
+            textBox5.Enabled = true;
+            textBox6.Clear();
+            textBox6.Enabled = true;
+            textBoxMax.Clear();
+            purchases.Clear();
         }
     }
 }
