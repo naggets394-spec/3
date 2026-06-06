@@ -41,3 +41,14 @@ D:\Users\1213-3\Documents\2-ИСП\работа 2.1\obj\Debug\Практичке
 D:\Users\1213-3\Documents\2-ИСП\работа 2.1\obj\Debug\Практичкеская работа №3.csproj.CoreCompileInputs.cache
 D:\Users\1213-3\Documents\2-ИСП\работа 2.1\obj\Debug\Практичкеская работа №3.exe
 D:\Users\1213-3\Documents\2-ИСП\работа 2.1\obj\Debug\Практичкеская работа №3.pdb
+C:\учебная\работа 2.1\2.1\bin\Debug\Практичкеская работа №3.exe.config
+C:\учебная\работа 2.1\2.1\bin\Debug\Практичкеская работа №3.exe
+C:\учебная\работа 2.1\2.1\bin\Debug\Практичкеская работа №3.pdb
+C:\учебная\работа 2.1\2.1\obj\Debug\Практичкеская работа №3.csproj.AssemblyReference.cache
+C:\учебная\работа 2.1\2.1\obj\Debug\Практичкеская_работа__3.Form1.resources
+C:\учебная\работа 2.1\2.1\obj\Debug\Практичкеская_работа__3.Properties.Resources.resources
+C:\учебная\работа 2.1\2.1\obj\Debug\Практичкеская работа №3.csproj.GenerateResource.cache
+C:\учебная\работа 2.1\2.1\obj\Debug\Практичкеская работа №3.csproj.CoreCompileInputs.cache
+C:\учебная\работа 2.1\2.1\obj\Debug\Практичкеская работа №3.exe
+C:\учебная\работа 2.1\2.1\obj\Debug\Практичкеская работа №3.pdb
+C:\учебная\работа 2.1\2.1\obj\Debug\Практичкеская_работа__3.Form2.resources

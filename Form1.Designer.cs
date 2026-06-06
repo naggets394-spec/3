@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выполнитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,19 +39,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.textBoxMax = new System.Windows.Forms.TextBox();
-            this.buttonOn = new System.Windows.Forms.Button();
             this.radioButtonHand = new System.Windows.Forms.RadioButton();
             this.radioButtonRand = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBoxRandom = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CreateBtn = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBoxRandom.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -72,7 +72,6 @@
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.выполнитьToolStripMenuItem,
             this.очиститьToolStripMenuItem,
             this.toolStripMenuItem1,
             this.выходToolStripMenuItem});
@@ -80,28 +79,24 @@
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
-            // выполнитьToolStripMenuItem
-            // 
-            this.выполнитьToolStripMenuItem.Name = "выполнитьToolStripMenuItem";
-            this.выполнитьToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.выполнитьToolStripMenuItem.Text = "Выполнить";
-            // 
             // очиститьToolStripMenuItem
             // 
             this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
-            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.очиститьToolStripMenuItem.Text = "Очистить";
+            this.очиститьToolStripMenuItem.Click += new System.EventHandler(this.очиститьToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(133, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(123, 6);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -114,15 +109,17 @@
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.справкаToolStripMenuItem.Text = "Справка";
+            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(447, 291);
+            this.label1.Location = new System.Drawing.Point(447, 276);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 13);
             this.label1.TabIndex = 14;
@@ -131,12 +128,13 @@
             // 
             // ClearBtn
             // 
+            this.ClearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ClearBtn.BackColor = System.Drawing.Color.Transparent;
             this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ClearBtn.ForeColor = System.Drawing.Color.DarkBlue;
-            this.ClearBtn.Location = new System.Drawing.Point(584, 389);
+            this.ClearBtn.Location = new System.Drawing.Point(465, 389);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(119, 19);
+            this.ClearBtn.Size = new System.Drawing.Size(197, 23);
             this.ClearBtn.TabIndex = 15;
             this.ClearBtn.Text = "Очистить";
             this.ClearBtn.UseVisualStyleBackColor = false;
@@ -144,23 +142,12 @@
             // 
             // textBoxMax
             // 
+            this.textBoxMax.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.textBoxMax.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBoxMax.Location = new System.Drawing.Point(450, 311);
+            this.textBoxMax.Location = new System.Drawing.Point(450, 296);
             this.textBoxMax.Name = "textBoxMax";
             this.textBoxMax.Size = new System.Drawing.Size(252, 20);
             this.textBoxMax.TabIndex = 16;
-            // 
-            // buttonOn
-            // 
-            this.buttonOn.BackColor = System.Drawing.Color.Transparent;
-            this.buttonOn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonOn.ForeColor = System.Drawing.Color.DarkBlue;
-            this.buttonOn.Location = new System.Drawing.Point(450, 389);
-            this.buttonOn.Name = "buttonOn";
-            this.buttonOn.Size = new System.Drawing.Size(119, 19);
-            this.buttonOn.TabIndex = 17;
-            this.buttonOn.Text = "Выполнить";
-            this.buttonOn.UseVisualStyleBackColor = false;
             // 
             // radioButtonHand
             // 
@@ -178,6 +165,7 @@
             // 
             // radioButtonRand
             // 
+            this.radioButtonRand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButtonRand.AutoSize = true;
             this.radioButtonRand.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonRand.ForeColor = System.Drawing.Color.DarkBlue;
@@ -214,6 +202,7 @@
             // 
             // groupBoxRandom
             // 
+            this.groupBoxRandom.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBoxRandom.BackColor = System.Drawing.Color.Transparent;
             this.groupBoxRandom.Controls.Add(this.button2);
             this.groupBoxRandom.Controls.Add(this.button1);
@@ -229,6 +218,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.textBox5);
@@ -237,54 +227,83 @@
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.groupBox1.Location = new System.Drawing.Point(96, 101);
+            this.groupBox1.Location = new System.Drawing.Point(96, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 307);
+            this.groupBox1.Size = new System.Drawing.Size(296, 278);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Список покупок";
             // 
-            // textBox1
+            // textBox6
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(28, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(221, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(28, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(221, 20);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(28, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(221, 20);
-            this.textBox4.TabIndex = 3;
+            this.textBox6.Location = new System.Drawing.Point(28, 228);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(221, 20);
+            this.textBox6.TabIndex = 5;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(28, 202);
+            this.textBox5.Location = new System.Drawing.Point(28, 186);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(221, 20);
             this.textBox5.TabIndex = 4;
             // 
-            // textBox6
+            // textBox4
             // 
-            this.textBox6.Location = new System.Drawing.Point(28, 244);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(221, 20);
-            this.textBox6.TabIndex = 5;
+            this.textBox4.Location = new System.Drawing.Point(28, 145);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(221, 20);
+            this.textBox4.TabIndex = 3;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(28, 107);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(221, 20);
+            this.textBox3.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(28, 71);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(221, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(28, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(221, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // CreateBtn
+            // 
+            this.CreateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CreateBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CreateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CreateBtn.ForeColor = System.Drawing.Color.DarkBlue;
+            this.CreateBtn.Location = new System.Drawing.Point(161, 389);
+            this.CreateBtn.Name = "CreateBtn";
+            this.CreateBtn.Size = new System.Drawing.Size(112, 23);
+            this.CreateBtn.TabIndex = 19;
+            this.CreateBtn.Text = "Создать спиок ";
+            this.CreateBtn.UseVisualStyleBackColor = false;
+            this.CreateBtn.Click += new System.EventHandler(this.CreateBtn_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.ForeColor = System.Drawing.Color.DarkBlue;
+            this.button3.Location = new System.Drawing.Point(450, 322);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(252, 23);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Найти ";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
@@ -293,10 +312,11 @@
             this.BackgroundImage = global::Практичкеская_работа__3.Properties.Resources.notebook_paper_background_grid_note_document_vector;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(751, 473);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.CreateBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.radioButtonHand);
             this.Controls.Add(this.radioButtonRand);
-            this.Controls.Add(this.buttonOn);
             this.Controls.Add(this.textBoxMax);
             this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.label1);
@@ -306,7 +326,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Список покупок!";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBoxRandom.ResumeLayout(false);
@@ -322,14 +342,12 @@
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem выполнитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem очиститьToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ClearBtn;
         private System.Windows.Forms.TextBox textBoxMax;
-        private System.Windows.Forms.Button buttonOn;
         private System.Windows.Forms.RadioButton radioButtonHand;
         private System.Windows.Forms.RadioButton radioButtonRand;
         private System.Windows.Forms.Button button1;
@@ -342,6 +360,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button CreateBtn;
+        private System.Windows.Forms.Button button3;
     }
 }
 
